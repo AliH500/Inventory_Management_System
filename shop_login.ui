@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomerLoginDialog</class>
+ <widget class="QDialog" name="CustomerLoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Online Store - Sign in</string>
+  </property>
+  <layout class="QVBoxLayout" name="layout_205">
+   <item>
+    <widget class="QLabel" name="label_188">
+     <property name="styleSheet">
+      <string>font-size: 22px; font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>Online Store</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabs">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tabSignIn">
+      <attribute name="title">
+       <string>Sign in</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="layout_194">
+       <item>
+        <layout class="QFormLayout" name="layout_191">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_189">
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="edEmail">
+           <property name="placeholderText">
+            <string>you@example.com</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_190">
+           <property name="text">
+            <string>Password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="edPassword">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layout_193">
+         <item>
+          <widget class="QPushButton" name="btnSignIn">
+           <property name="text">
+            <string>Sign in</string>
+           </property>
+           <property name="default">
+            <bool>true</bool>
+           </property>
+           <property name="role" stdset="0">
+            <string>primary</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabRegister">
+      <attribute name="title">
+       <string>Create account</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="layout_204">
+       <item>
+        <layout class="QFormLayout" name="layout_201">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_195">
+           <property name="text">
+            <string>First name</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="edRegFirstName"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_196">
+           <property name="text">
+            <string>Last name</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="edRegLastName"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_197">
+           <property name="text">
+            <string>Email</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="edRegEmail"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_198">
+           <property name="text">
+            <string>Contact</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="edRegContact">
+           <property name="placeholderText">
+            <string>03xx-xxxxxxx</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_199">
+           <property name="text">
+            <string>Password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="edRegPassword">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_200">
+           <property name="text">
+            <string>Confirm password</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="edRegConfirm">
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layout_203">
+         <item>
+          <widget class="QPushButton" name="btnRegister">
+           <property name="text">
+            <string>Create account</string>
+           </property>
+           <property name="role" stdset="0">
+            <string>primary</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblError">
+     <property name="visible">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string>color: #c0392b;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,13 @@
+QWidget { font-size: 13px; }
+QListWidget#navList { background: #1f2933; color: #cbd2d9; border: none; outline: none; }
+QListWidget#navList::item { padding: 12px 16px; }
+QListWidget#navList::item:selected { background: #3e4c59; color: white; }
+QLabel#lblAppTitle, QLabel#lblCurrentUser, QWidget#sidebar { background: #1f2933; color: #e4e7eb; }
+QPushButton { padding: 6px 14px; border: 1px solid #bbb; border-radius: 4px; background: #f5f5f5; }
+QPushButton:hover { background: #e8e8e8; }
+QPushButton[role="primary"] { background: #2563eb; color: white; border-color: #2563eb; }
+QPushButton[role="primary"]:hover { background: #1d4ed8; }
+QPushButton[role="danger"] { color: #b91c1c; border-color: #b91c1c; background: white; }
+QGroupBox { font-weight: bold; margin-top: 10px; }
+QGroupBox::title { subcontrol-origin: margin; left: 10px; padding: 0 4px; }
+QGroupBox QLabel, QGroupBox QLineEdit, QGroupBox QComboBox { font-weight: normal; }

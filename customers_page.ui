@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomersPage</class>
+ <widget class="QWidget" name="CustomersPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Customers</string>
+  </property>
+  <layout class="QHBoxLayout" name="layout_137" stretch="3,2">
+   <item>
+    <layout class="QVBoxLayout" name="layout_115">
+     <item>
+      <layout class="QHBoxLayout" name="layout_114">
+       <item>
+        <widget class="QLineEdit" name="edSearch">
+         <property name="placeholderText">
+          <string>Search by name, email, contact or card code</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cmbCustomerFilter">
+         <item>
+          <property name="text">
+           <string>All customers</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Online accounts</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Loyalty card holders</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnSearch">
+         <property name="text">
+          <string>Search</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tblCustomers">
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <property name="selectionMode">
+        <enum>QAbstractItemView::SingleSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>80</number>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>40</number>
+       </attribute>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Contact</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Email</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Registered</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Card</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Points</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="layout_136">
+     <item>
+      <widget class="QGroupBox" name="grpProfile">
+       <property name="title">
+        <string>Customer</string>
+       </property>
+       <layout class="QFormLayout" name="layout_121">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_116">
+          <property name="text">
+           <string>Customer ID</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="lblCustomerId">
+          <property name="text">
+           <string>(auto)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_117">
+          <property name="text">
+           <string>First name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="edFirstName"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_118">
+          <property name="text">
+           <string>Last name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="edLastName"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_119">
+          <property name="text">
+           <string>Contact</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="edContact">
+          <property name="placeholderText">
+           <string>03xx-xxxxxxx</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_120">
+          <property name="text">
+           <string>Registered</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="lblRegDate">
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="grpOnline">
+       <property name="title">
+        <string>Online account</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <layout class="QFormLayout" name="layout_124">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_122">
+          <property name="text">
+           <string>Email</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="edEmail"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_123">
+          <property name="text">
+           <string>Password</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="edPassword">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Leave blank to keep current</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="grpLoyalty">
+       <property name="title">
+        <string>Loyalty card</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <layout class="QVBoxLayout" name="layout_131">
+        <item>
+         <layout class="QFormLayout" name="layout_130">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_125">
+            <property name="text">
+             <string>Card code</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="lblCardCode">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_126">
+            <property name="text">
+             <string>Issue date</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="lblIssueDate">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_127">
+            <property name="text">
+             <string>Expiry date</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QDateEdit" name="dteExpiry">
+            <property name="displayFormat">
+             <string>dd/MM/yyyy</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_128">
+            <property name="text">
+             <string>Points</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLabel" name="lblPoints">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_129">
+            <property name="text">
+             <string>Status</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLabel" name="lblCardStatus">
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_132">
+       <property name="styleSheet">
+        <string>color: gray;</string>
+       </property>
+       <property name="text">
+        <string>Online account for web customers. Loyalty card for in store customers. Customer can have both.</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="spacer_133">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="layout_135">
+       <item>
+        <widget class="QPushButton" name="btnNew">
+         <property name="text">
+          <string>New</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnDelete">
+         <property name="text">
+          <string>Delete</string>
+         </property>
+         <property name="role" stdset="0">
+          <string>danger</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="spacer_134">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnSave">
+         <property name="text">
+          <string>Save</string>
+         </property>
+         <property name="role" stdset="0">
+          <string>primary</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
